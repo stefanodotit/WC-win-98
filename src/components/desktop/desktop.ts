@@ -56,7 +56,7 @@ export class DesktopWin extends LitElement {
         <general-item 
           @doubleClick="${this._handleItemDoubleClick.bind(this,'ie')}" 
           text="Internet Explorer" 
-          imgSrc="src/assets/ico/desktop/internet-explorer.png"></general-item>
+          imgSrc="assets/ico/desktop/internet-explorer.png"></general-item>
         ${this.modals.map(modal => modal.template)}
       </div>
     `;

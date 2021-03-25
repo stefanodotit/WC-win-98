@@ -70,7 +70,7 @@ export class ModalWin extends LitElement {
     return html`
       <modal-win @close="${this._handleClose}" noBodyMargin="true">
         <div class="title" slot="title">
-          <img src="src/assets/ico/ie/ico.png" alt="ie icon" />
+          <img src="assets/ico/ie/ico.png" alt="ie icon" />
           ${this.title} - Microsoft Internet Explorer
         </div>
         <div class="bodySlot" slot="body">
@@ -88,7 +88,7 @@ export class ModalWin extends LitElement {
                 <div><u>H</u>elp</div>
               </div>
               <div class="menuToolRight">
-                <img alt="logo window" src="src/assets/ico/ie/winLogo.png" />
+                <img alt="logo window" src="assets/ico/ie/winLogo.png" />
               </div>
             </div>
           </div>

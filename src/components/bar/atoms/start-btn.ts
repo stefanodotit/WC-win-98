@@ -42,7 +42,7 @@ export class StartBtn extends LitElement {
     const classes = {btn: true, isOpen: this.isOpen}
     return html`
       <div class=${classMap(classes)} @click="${this._handleClick}">
-        <img alt="windows-98-icon" src="src/assets/ico/windows.png" />
+        <img alt="windows-98-icon" src="assets/ico/windows.png" />
         <p>Start</p>
       </div>
     `;

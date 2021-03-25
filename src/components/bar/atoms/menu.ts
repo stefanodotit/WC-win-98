@@ -98,61 +98,61 @@ export class StartBtn extends LitElement {
     this._items = [
       {
         name: "Windows Update",
-        ico: "src/assets/ico/menu/windows_update_small.png",
+        ico: "assets/ico/menu/windows_update_small.png",
         disabled: true,
         arrow: false
       },
       {
         name: "<u>P</u>rograms",
-        ico: "src/assets/ico/menu/directory_program_group_small.png",
+        ico: "assets/ico/menu/directory_program_group_small.png",
         disabled: true,
         arrow: true
       },
       {
         name: "<u>F</u>avourites",
-        ico: "src/assets/ico/menu/directory_favorites_small.png",
+        ico: "assets/ico/menu/directory_favorites_small.png",
         disabled: true,
         arrow: true
       },
       {
         name: "<u>D</u>ocuments",
-        ico: "src/assets/ico/menu/directory_open_cabinet.png",
+        ico: "assets/ico/menu/directory_open_cabinet.png",
         disabled: true,
         arrow: true
       },
       {
         name: "<u>S</u>ettings",
-        ico: "src/assets/ico/menu/settings_gear.png",
+        ico: "assets/ico/menu/settings_gear.png",
         disabled: true,
         arrow: true
       },
       {
         name: "<u>F</u>ind",
-        ico: "src/assets/ico/menu/search_file.png",
+        ico: "assets/ico/menu/search_file.png",
         disabled: true,
         arrow: true
       },
       {
         name: "<u>H</u>elp",
-        ico: "src/assets/ico/menu/help_book_small.png",
+        ico: "assets/ico/menu/help_book_small.png",
         disabled: true,
         arrow: false
       },
       {
         name: "<u>R</u>un",
-        ico: "src/assets/ico/menu/application_hourglass_small.png",
+        ico: "assets/ico/menu/application_hourglass_small.png",
         disabled: true,
         arrow: false
       },
       {
         name: "<u>L</u>og off Stefano...",
-        ico: "src/assets/ico/menu/key_win.png",
+        ico: "assets/ico/menu/key_win.png",
         disabled: true,
         arrow: false
       },
       {
         name: "Sh<u>u</u>t Down...",
-        ico: "src/assets/ico/menu/shut_down_cool.png",
+        ico: "assets/ico/menu/shut_down_cool.png",
         disabled: true,
         arrow: false
       }

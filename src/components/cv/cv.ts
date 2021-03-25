@@ -213,7 +213,7 @@ export class CvSt extends LitElement {
         </div>
 
         <div class="imgBox">
-          <img alt="me myself I" class="myImg" src="src/assets/images/me_myself_i.jpg" />
+          <img alt="me myself I" class="myImg" src="assets/images/me_myself_i.jpg" />
         </div>
       </section>
 

@@ -2,13 +2,13 @@
   "version": 2,
   "tags": [
     {
-      "name": "tagliabue-website",
-      "description": "An application with a title and an action counter",
+      "name": "win-98",
+      "description": "A Windows 98 desktop remake with WebComponent",
       "properties": [
         {
           "name": "title",
           "type": "String",
-          "description": "The title of your application",
+          "description": "A Windows 98 desktop remake with WebComponent",
           "default": "Hey there"
         },
         {
