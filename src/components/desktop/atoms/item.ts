@@ -45,7 +45,6 @@ export class GeneralIteam extends LitElement {
   }
 
   private _handleDoubleClick(){
-    console.log('dc')
     this.dispatchEvent(new CustomEvent('doubleClick'));
   }
 

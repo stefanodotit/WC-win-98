@@ -28,16 +28,17 @@ export class DesktopWin extends LitElement {
   // eslint-disable-next-line class-methods-use-this
   private _handleItemDoubleClick(what: string){
     switch (what) {
-      case 'ie':
+      case 'ie': {
         this.modals.push({
           id: 'ie',
           template: html`
-            <modal-ie title="Stefano Tagliabue CV " @close="${this._handleModalClose.bind(this,'ie')}" noBodyMargin="true">
+            <modal-ie title="Stefano Tagliabue CV" @close="${this._handleModalClose.bind(this,'ie')}" noBodyMargin="true">
               <cv-st slot="body"></cv-st>
             </modal-ie>
           `
         })
         break;
+      }
     
       default:
         break;

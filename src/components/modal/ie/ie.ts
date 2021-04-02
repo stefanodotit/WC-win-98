@@ -1,4 +1,5 @@
 import { LitElement, html, css, customElement, property } from 'lit-element';
+import { publish } from '../../../utils/eventbus'
 import { resetCss } from '../../../css/reset'
 import { css98 } from '../../../css/98'
 import '../modal'
@@ -62,16 +63,31 @@ export class ModalWin extends LitElement {
   
   `];
 
+  private idModal = 'ie'
+
   private _handleClose(){
     this.dispatchEvent(new CustomEvent('close'));
+    publish('closeWindow', this.idModal)
+  }
+
+  private _handleMinimize(){
+    this.dispatchEvent(new CustomEvent('minimize'));
+    publish('minimizeWindow', this.idModal)
   }
 
   render() {
+    const titleHtml = html`
+      <img src="assets/ico/ie/ico.png" alt="ie icon" />
+      <span>${this.title} - Microsoft Internet Explorer</span>
+    `
+    publish('openWindow', {
+      id: 'ie',
+      html: titleHtml
+    })
     return html`
-      <modal-win @close="${this._handleClose}" noBodyMargin="true">
+      <modal-win @close="${this._handleClose}" @minimize="${this._handleMinimize}" noBodyMargin="true" id="${this.idModal}">
         <div class="title" slot="title">
-          <img src="assets/ico/ie/ico.png" alt="ie icon" />
-          ${this.title} - Microsoft Internet Explorer
+          ${titleHtml}
         </div>
         <div class="bodySlot" slot="body">
           <div class="boxBtns">

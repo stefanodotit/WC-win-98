@@ -17,7 +17,8 @@
     "incremental": true,
     "baseUrl": "./src",
     "paths": {
-      "@css/*": ["css/*"]
+      "@css/*": ["css/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["**/*.ts"]
