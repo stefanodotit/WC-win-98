@@ -10,6 +10,7 @@ export class ClockWin extends LitElement {
       justify-content: center;
       height: 100%;
       text-transform: uppercase;
+      font-size: 12px;
     }
   `];
 

@@ -2,6 +2,7 @@
 /* eslint-disable lit-a11y/click-events-have-key-events */
 /* eslint-disable class-methods-use-this */
 import { LitElement, html, css, customElement, TemplateResult } from 'lit-element';
+import { classMap } from 'lit-html/directives/class-map';
 import { resetCss } from '../../css/reset'
 import { subscribe, publish } from '../../utils/eventbus'
 import './atoms/start-btn'
@@ -96,6 +97,19 @@ export class BarWin extends LitElement {
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
+    .clickOutside{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      display: none
+    }
+    .clickOutside.isVisible {
+      display: block
+    }
   `];
 
   private isOpen = false
@@ -145,10 +159,11 @@ export class BarWin extends LitElement {
       })
       this.firstRender = true
     }
+    const outsideClasses = {clickOutside: true, isVisible: this.isOpen}
     return html`
       <div class="container">
         <div class="leftSide">
-          <start-btn @open="${this._handleOpen}"></start-btn>
+          <start-btn isOpen="${this.isOpen}" @open="${this._handleOpen}"></start-btn>
         </div>
         <div class="centralSide">
           ${this.arrayWindows.map(win => html `<div @click="${this._handleClickWinTask.bind(this, win.id)}" class="windowTask ${win.blur ? 'blur': ''}"> ${win.html} </div>`)}
@@ -157,6 +172,7 @@ export class BarWin extends LitElement {
           <clock-win></clock-win>
         </div>
         <menu-bar .isVisible="${this.isOpen}"></menu-bar>
+        <div @click="${this._handleOpen}" class=${classMap(outsideClasses)}></div>
       </div>
     `;
   }

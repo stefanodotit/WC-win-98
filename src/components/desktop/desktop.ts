@@ -21,6 +21,12 @@ export class DesktopWin extends LitElement {
       position: relative;
       padding: 5px 10px;
     }
+    general-item {
+      margin-top: 20px;
+    }
+    general-item:first-child {
+      margin-top:0;
+    }
   `];
 
   private modals: Array<ModalsArray> = []
@@ -46,6 +52,11 @@ export class DesktopWin extends LitElement {
     this.requestUpdate()
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  private _handleGithubDoubleClick(){
+    window.open('https://github.com/stefanodotit/WC-win-98', '_blank')
+  }
+
   private _handleModalClose(id: string){
     this.modals=this.modals.filter(modal => modal.id !== id)
     this.requestUpdate()
@@ -58,6 +69,12 @@ export class DesktopWin extends LitElement {
           @doubleClick="${this._handleItemDoubleClick.bind(this,'ie')}" 
           text="Internet Explorer" 
           imgSrc="assets/ico/desktop/internet-explorer.png"></general-item>
+
+        <general-item 
+          @doubleClick="${this._handleGithubDoubleClick}" 
+          text="Source Code" 
+          imgSrc="assets/ico/desktop/github.png"></general-item>
+
         ${this.modals.map(modal => modal.template)}
       </div>
     `;

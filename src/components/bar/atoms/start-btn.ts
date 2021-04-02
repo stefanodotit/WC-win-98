@@ -1,10 +1,12 @@
 /* eslint-disable lit-a11y/click-events-have-key-events */
-import { LitElement, html, css, customElement } from 'lit-element';
+import { LitElement, html, css, customElement, property } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { resetCss } from '../../../css/reset'
 
 @customElement('start-btn')
 export class StartBtn extends LitElement {
+  @property({ type: String, reflect: true }) isOpen = 'false';
+
   static styles = [resetCss, css`
     .btn {
       font-size: 12px;
@@ -30,16 +32,12 @@ export class StartBtn extends LitElement {
     }
   `];
 
-  private isOpen = false
-
   private _handleClick(){
-    this.isOpen = !this.isOpen
-    this.requestUpdate()
     this.dispatchEvent(new CustomEvent('open'));
   }
 
   render() {
-    const classes = {btn: true, isOpen: this.isOpen}
+    const classes = {btn: true, isOpen: this.isOpen==='true'}
     return html`
       <div class=${classMap(classes)} @click="${this._handleClick}">
         <img alt="windows-98-icon" src="assets/ico/windows.png" />

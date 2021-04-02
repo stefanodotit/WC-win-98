@@ -4,6 +4,12 @@
 
 <https://tagliabue.dev/>
 
+## :bomb: Dependencies :bomb
+
+- 98.css
+- lit-element
+- lit-html
+
 ## Dev Scripts
 
 - `start` runs your app for development, reloading on file changes
@@ -16,4 +22,4 @@
 
 - [ ] Test
 - [ ] Menu
-- [ ] Minimize Modals
+- [X] Minimize Modals

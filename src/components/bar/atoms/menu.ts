@@ -1,5 +1,6 @@
 import { LitElement, html, css, customElement, property } from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
+import { classMap } from 'lit-html/directives/class-map';
 import { resetCss } from '../../../css/reset'
 
 type Item = {
@@ -85,6 +86,7 @@ export class StartBtn extends LitElement {
    }
     .right .itemMenu p {
       margin-left: 10px;
+      font-size: 12px;
    }
     .right .itemMenu .arrow {
       margin-left: auto;
@@ -167,8 +169,10 @@ export class StartBtn extends LitElement {
         ${ item.arrow ? html`<div class="arrow">▸</div>` : html`` }
       </div>
     `)
+    const mainClasses = {box: true, isVisible: this.isVisible}
+    const outsideClasses = {clickOutside: true, isVisible: this.isVisible}
     return html`
-      <div class="box ${ this.isVisible ? 'isVisible' : '' }">
+      <div class=${classMap(mainClasses)}>
         <div class="left">
           <p><strong>Windows</strong> 98</p>
         </div>
@@ -176,6 +180,7 @@ export class StartBtn extends LitElement {
           ${rows}
         </div>
       </div>
+      <div class=${classMap(outsideClasses)}></div>
     `;
   }
 }

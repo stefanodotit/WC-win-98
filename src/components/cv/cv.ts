@@ -20,6 +20,10 @@ export class CvSt extends LitElement {
       font-family: "Press Start 2P";
     } 
 
+    h3{
+      margin-top:10px;
+    }
+
     menu {
       padding: 0;
       margin: 0;
@@ -180,10 +184,10 @@ export class CvSt extends LitElement {
             <span class="is-success">I'm</span>
           </a>
           <div class="txtBox">
-            <h1 class="text-xl sm:text-2xl lg:text-3xl">
+            <h1>
               Stefano Tagliabue
             </h1>
-            <h3 class="text-xs sm:text-sm lg:text-base">
+            <h3>
               Technical Team Leader
             </h3>
           </div>
@@ -219,7 +223,7 @@ export class CvSt extends LitElement {
 
       <section class="skills section">
         <div class="sectionTextBox">
-          <a href="#skills" class="mr-3"><i class="nes-icon heart"></i></a>
+          <a href="#skills"><i class="nes-icon heart"></i></a>
           SKILLS
         </div>
         <div class="nes-container">
@@ -236,7 +240,7 @@ export class CvSt extends LitElement {
 
       <section class="skills section">
         <div class="sectionTextBox">
-          <a href="#career" class="mr-3"><i class="nes-icon star"></i></a>
+          <a href="#career"><i class="nes-icon star"></i></a>
           CAREER
         </div>
         <div class="nes-container badgeContainer">
@@ -265,7 +269,7 @@ export class CvSt extends LitElement {
 
       <section class="skills section">
         <div class="sectionTextBox">
-          <a href="#awards" class="mr-3"><i class="nes-icon trophy"></i></a>
+          <a href="#awards"><i class="nes-icon trophy"></i></a>
           AWARDS
         </div>
         <div class="nes-container">
@@ -282,7 +286,7 @@ export class CvSt extends LitElement {
 
       <section class="skills section">
         <div class="sectionTextBox">
-          <a href="#languages" class="mr-3"><i class="nes-icon like"></i></a>
+          <a href="#languages"><i class="nes-icon like"></i></a>
           LANGUAGES
         </div>
         <div class="nes-container">
