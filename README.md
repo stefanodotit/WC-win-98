@@ -4,7 +4,7 @@
 
 <https://tagliabue.dev/>
 
-## :bomb: Dependencies :bomb
+## :bomb: Dependencies :bomb:
 
 - 98.css
 - lit-element
